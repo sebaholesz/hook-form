@@ -29,9 +29,10 @@ const validationSchema = Yup.object().shape({
 const NewsletterForm = (props) => {
   const formProviderMethods = useForm({
     mode: "onBlur",
+    reValidateMode: "onChange",
     defaultValues: {
       email: "",
-      fullName: " ",
+      fullName: "",
       gdprCompliance: false,
       newsletterFrequency: "",
     },
